@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingeniería en Sistemas UMG</title>
+  <meta
+    name="description"
+    content="Landing page moderna para promocionar la carrera de Ingenieria en Sistemas de la Universidad Mariano Galvez."
+  >
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            umg: {
+              navy: "#0f2d5c",
+              blue: "#1e4f9a",
+              sky: "#44b9f1",
+              ice: "#eef8ff",
+              soft: "#f7fbff",
+              line: "#d6e7fb"
+            }
+          },
+          fontFamily: {
+            display: ["Sora", "sans-serif"],
+            body: ["Plus Jakarta Sans", "sans-serif"]
+          },
+          boxShadow: {
+            soft: "0 24px 60px -28px rgba(27, 76, 147, 0.18)",
+            card: "0 18px 42px -24px rgba(17, 48, 102, 0.16)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-body text-slate-700 antialiased selection:bg-sky-200 selection:text-umg-navy">
+  <div class="page-background fixed inset-0 -z-20 overflow-hidden">
+    <div class="absolute inset-0 bg-[linear-gradient(180deg,_#ffffff_0%,_#f6fbff_48%,_#edf7ff_100%)]"></div>
+    <div class="decor-orb decor-orb-a"></div>
+    <div class="decor-orb decor-orb-b"></div>
+    <div class="decor-orb decor-orb-c"></div>
+    <div class="dot-pattern absolute inset-0 opacity-50"></div>
+  </div>
+
+  <header id="site-header" class="sticky top-0 z-50 transition-all duration-300">
+    <nav class="mx-auto mt-3 flex w-[min(1180px,92vw)] items-center justify-between gap-4 rounded-[24px] border border-white/80 bg-white/82 px-5 py-4 shadow-[0_16px_36px_-28px_rgba(15,45,92,0.3)] backdrop-blur-xl md:px-7">
+      <a href="#inicio" class="flex items-center gap-3">
+        <div class="flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-100 bg-white shadow-soft">
+          <img src="assets/img/umg.png" alt="Logo UMG" class="h-10 w-10 object-contain">
+        </div>
+        <div>
+          <p class="text-[11px] font-extrabold uppercase tracking-[0.28em] text-sky-600">Universidad Mariano Galvez</p>
+          <p class="font-display text-sm font-bold text-umg-navy md:text-base">Ingeniería en Sistemas</p>
+        </div>
+      </a>
+
+      <button
+        id="menu-toggle"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-umg-navy md:hidden"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+        <span class="menu-line"></span>
+      </button>
+
+      <div class="hidden items-center gap-7 md:flex">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#carrera" class="nav-link">Carrera</a>
+        <a href="#areas" class="nav-link">Areas</a>
+        <a href="#beneficios" class="nav-link">Beneficios</a>
+        <a href="#testimonios" class="nav-link">Testimonios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+        <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer" class="cta-primary compact">Solicitar informacion</a>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="mx-auto hidden w-[min(1180px,92vw)] overflow-hidden rounded-b-[24px] border border-t-0 border-white/80 bg-white/95 px-5 pb-5 shadow-soft backdrop-blur-xl md:hidden">
+      <div class="flex flex-col gap-2 pt-3">
+        <a href="#inicio" class="mobile-link">Inicio</a>
+        <a href="#carrera" class="mobile-link">Carrera</a>
+        <a href="#areas" class="mobile-link">Areas</a>
+        <a href="#beneficios" class="mobile-link">Beneficios</a>
+        <a href="#testimonios" class="mobile-link">Testimonios</a>
+        <a href="#contacto" class="mobile-link">Contacto</a>
+        <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer" class="cta-primary justify-center">Solicitar informacion</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="mx-auto w-[min(1180px,92vw)] pt-10 md:pt-14">
+      <div class="hero-shell reveal overflow-hidden rounded-[38px] border border-white bg-white/88 px-6 py-10 shadow-soft md:px-10 md:py-14 lg:px-14">
+        <div class="grid items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+          <div class="relative z-10">
+            <span class="section-kicker">Carrera con vision tecnologica</span>
+            <h1 class="mt-5 max-w-3xl font-display text-4xl font-extrabold leading-tight text-umg-navy md:text-5xl lg:text-6xl">
+              Estudia Ingeniería en Sistemas en UMG
+            </h1>
+            <p class="mt-5 max-w-2xl text-base leading-8 text-slate-600 md:text-lg">
+              Preparate para crear software, administrar tecnologia, resolver problemas reales y construir tu futuro profesional.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer" class="cta-primary">Solicitar informacion</a>
+              <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer" class="cta-secondary">Ver pensum</a>
+            </div>
+          </div>
+
+          <div class="relative hero-visual">
+            <div class="floating-card floating-card-a">
+              <span>&lt;/&gt;</span>
+              <strong>Codigo</strong>
+            </div>
+            <div class="floating-card floating-card-b">
+              <span>🗄️</span>
+              <strong>Datos</strong>
+            </div>
+            <div class="floating-card floating-card-c">
+              <span>☁️</span>
+              <strong>Nube</strong>
+            </div>
+            <div class="floating-card floating-card-d">
+              <span>🤖</span>
+              <strong>IA</strong>
+            </div>
+
+            <div class="hero-panel relative overflow-hidden rounded-[34px] border border-sky-100 bg-[linear-gradient(180deg,_#eef8ff_0%,_#ffffff_100%)] p-4 shadow-card">
+              <div class="absolute left-6 top-6 h-24 w-24 rounded-full bg-sky-200/50 blur-2xl"></div>
+              <div class="absolute right-8 top-16 h-20 w-20 rounded-full bg-blue-100/70 blur-xl"></div>
+              <img
+                src="assets/img/fondo1.jpg"
+                alt="Estudiantes y tecnologia"
+                class="relative z-10 h-[420px] w-full rounded-[26px] object-cover"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="quick-card reveal">
+          <div class="quick-icon">🏛️</div>
+          <h2>+30 años formando lideres</h2>
+          <p>Trayectoria academica orientada al crecimiento profesional y la excelencia.</p>
+        </article>
+        <article class="quick-card reveal">
+          <div class="quick-icon">📈</div>
+          <h2>Alta demanda laboral</h2>
+          <p>Formacion alineada con las necesidades actuales del sector tecnologico.</p>
+        </article>
+        <article class="quick-card reveal">
+          <div class="quick-icon">🕒</div>
+          <h2>Modalidades flexibles</h2>
+          <p>Opciones pensadas para facilitar el acceso y continuidad de tus estudios.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="carrera" class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="reveal section-heading-block">
+        <span class="section-kicker">Por que elegir esta carrera</span>
+        <h2 class="section-title">Ingeniería en Sistemas con enfoque moderno y profesional</h2>
+        <p class="section-copy">
+          Una carrera para construir soluciones utiles, participar en transformacion digital y desarrollar criterio tecnico con impacto real.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <article class="info-card reveal"><div class="icon-chip">📊</div><h3>Alta demanda laboral</h3><p>Las organizaciones necesitan talento tecnico capaz de diseñar y mantener soluciones digitales.</p></article>
+        <article class="info-card reveal"><div class="icon-chip">🌍</div><h3>Oportunidad de trabajar remoto</h3><p>La carrera abre opciones locales e internacionales en entornos flexibles y distribuidos.</p></article>
+        <article class="info-card reveal"><div class="icon-chip">💻</div><h3>Desarrollo de software</h3><p>Aprenderas a convertir necesidades reales en productos funcionales y escalables.</p></article>
+        <article class="info-card reveal"><div class="icon-chip">🗃️</div><h3>Administracion de bases de datos</h3><p>Gestiona informacion critica con estructura, integridad y rendimiento.</p></article>
+        <article class="info-card reveal"><div class="icon-chip">🛡️</div><h3>Ciberseguridad</h3><p>Comprende riesgos, controles y practicas para proteger sistemas y datos.</p></article>
+        <article class="info-card reveal"><div class="icon-chip">✨</div><h3>Innovacion tecnologica</h3><p>Integra nuevas herramientas, automatización e inteligencia para resolver problemas complejos.</p></article>
+      </div>
+    </section>
+
+    <section id="areas" class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="reveal section-heading-block">
+        <span class="section-kicker">Areas de aprendizaje</span>
+        <h2 class="section-title">Formacion integral para distintos caminos en tecnologia</h2>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2">
+        <article class="area-card reveal"><div class="area-icon">💻</div><div><h3>Programación</h3><p>Logica, algoritmos y construccion de aplicaciones en distintos contextos.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">🗄️</div><div><h3>Bases de datos</h3><p>Modelado, consultas y administracion de información para sistemas modernos.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">🌐</div><div><h3>Redes</h3><p>Conectividad, infraestructura y principios de comunicacion entre sistemas.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">🧩</div><div><h3>Desarrollo web</h3><p>Interfaces, integracion de servicios y experiencias digitales funcionales.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">🤖</div><div><h3>Inteligencia artificial</h3><p>Aplicacion de modelos y automatización para analisis y toma de decisiones.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">🔐</div><div><h3>Ciberseguridad</h3><p>Proteccion de activos digitales, buenas practicas y prevencion de riesgos.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">📐</div><div><h3>Ingeniería de software</h3><p>Diseno, calidad, pruebas y gestion del ciclo de vida del desarrollo.</p></div></article>
+        <article class="area-card reveal"><div class="area-icon">⚙️</div><div><h3>Sistemas operativos</h3><p>Base tecnica para administrar recursos, procesos y entornos de ejecucion.</p></div></article>
+      </div>
+    </section>
+
+    <section class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="grid gap-8 lg:grid-cols-[0.94fr_1.06fr] lg:items-center">
+        <div class="reveal">
+          <span class="section-kicker">Perfil del egresado</span>
+          <h2 class="section-title">Competencias para responder a retos reales</h2>
+          <ul class="mt-8 space-y-4">
+            <li class="skill-item">Diseña y desarrolla sistemas informaticos.</li>
+            <li class="skill-item">Administra y gestiona bases de datos.</li>
+            <li class="skill-item">Implementa soluciones tecnologicas innovadoras.</li>
+            <li class="skill-item">Gestiona proyectos de software.</li>
+            <li class="skill-item">Analiza y mejora procesos empresariales.</li>
+            <li class="skill-item">Puede trabajar como desarrollador, analista, DBA, soporte tecnico, DevOps o consultor tecnologico.</li>
+          </ul>
+        </div>
+
+        <div class="profile-visual reveal">
+          <div class="profile-float profile-float-a"></div>
+          <div class="profile-float profile-float-b"></div>
+          <div class="relative overflow-hidden rounded-[34px] border border-sky-100 bg-white p-4 shadow-card">
+            <img
+             src="assets/img/fondo2.jpg"
+              alt="Estudiantes en entorno tecnologico"
+              class="h-[420px] w-full rounded-[26px] object-cover"
+            >
+            <div class="profile-overlay">
+              <div class="mini-badge">Analisis</div>
+              <div class="mini-badge">Software</div>
+              <div class="mini-badge">Infraestructura</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="beneficios" class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="reveal section-heading-block">
+        <span class="section-kicker">Beneficios de estudiar en UMG</span>
+        <h2 class="section-title">Una experiencia universitaria pensada para crecer</h2>
+      </div>
+
+      <div class="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
+        <article class="benefit-card reveal"><h3>Formacion academica solida</h3><p>Fundamentos claros para sostener decisiones tecnicas bien razonadas.</p></article>
+        <article class="benefit-card reveal"><h3>Enfoque practico</h3><p>Aprendizaje orientado a ejercicios, proyectos y aplicaciones concretas.</p></article>
+        <article class="benefit-card reveal"><h3>Docentes con experiencia</h3><p>Acompanamiento desde una vision academica y profesional.</p></article>
+        <article class="benefit-card reveal"><h3>Oportunidades de crecimiento</h3><p>Preparacion para distintos roles dentro del ecosistema digital.</p></article>
+        <article class="benefit-card reveal"><h3>Modalidades accesibles</h3><p>Alternativas que facilitan organizar tus estudios con otras responsabilidades.</p></article>
+        <article class="benefit-card reveal"><h3>Comunidad universitaria</h3><p>Espacios para colaborar, crear redes y fortalecer tu perfil integral.</p></article>
+      </div>
+    </section>
+
+    <section class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="reveal section-heading-block">
+        <span class="section-kicker">Galeria</span>
+        <h2 class="section-title">Entorno academico y tecnologico</h2>
+      </div>
+
+      <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <figure class="gallery-card reveal">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=900&q=80" alt="Programacion" class="gallery-image">
+          <figcaption>Programación</figcaption>
+        </figure>
+        <figure class="gallery-card reveal">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Estudiantes" class="gallery-image">
+          <figcaption>Estudiantes</figcaption>
+        </figure>
+        <figure class="gallery-card reveal">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Servidores" class="gallery-image">
+          <figcaption>Servidores</figcaption>
+        </figure>
+        <figure class="gallery-card reveal">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Tecnologia" class="gallery-image">
+          <figcaption>Tecnologia</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="testimonios" class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="reveal section-heading-block">
+        <span class="section-kicker">Testimonios</span>
+        <h2 class="section-title">Voces que reflejan la experiencia UMG</h2>
+      </div>
+
+      <div class="mt-10 grid gap-5 lg:grid-cols-3">
+        <article class="testimonial-card reveal">
+          <div class="quote-mark">“</div>
+          <p>La carrera me ha ayudado a entender como conectar la programación con problemas reales y proyectos con impacto.</p>
+          <div class="testimonial-meta">
+            <div class="avatar-circle">CM</div>
+            <div><strong>Carlos M.</strong><span>Estudiante</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card reveal">
+          <div class="quote-mark">“</div>
+          <p>UMG me dio una base tecnica ordenada y practica para integrarme al trabajo profesional con mas seguridad.</p>
+          <div class="testimonial-meta">
+            <div class="avatar-circle">AG</div>
+            <div><strong>Ana G.</strong><span>Egresada</span></div>
+          </div>
+        </article>
+        <article class="testimonial-card reveal">
+          <div class="quote-mark">“</div>
+          <p>Lo mejor ha sido descubrir varias areas de tecnologia y entender en cual puedo especializarme a futuro.</p>
+          <div class="testimonial-meta">
+            <div class="avatar-circle">LP</div>
+            <div><strong>Luis P.</strong><span>Estudiante</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="mx-auto w-[min(1180px,92vw)] py-20">
+      <div class="grid gap-8 lg:grid-cols-[0.86fr_1.14fr]">
+        <div class="contact-copy reveal">
+          <span class="section-kicker">Contacto</span>
+          <h2 class="section-title">Solicita información sobre la carrera</h2>
+          <p class="section-copy">
+            Completa el formulario y recibe una orientacion inicial sobre Ingeniería en Sistemas, jornadas y beneficios academicos.
+          </p>
+          <div class="mt-8 space-y-4">
+            <div class="contact-item"><strong>Sede:</strong><span>San Jose Pinula.</span></div>
+            <div class="contact-item"><strong>Correo:</strong><span>sistemas@umg.edu.gt</span></div>
+          </div>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer" class="cta-primary">Mas información</a>
+            <a href="mailto:sistemas@umg.edu.gt" class="cta-secondary">Escribir al correo</a>
+          </div>
+        </div>
+
+        <div class="contact-card reveal">
+          <form id="contact-form" novalidate class="grid gap-5">
+            <div>
+              <label for="fullName" class="form-label">Nombre completo</label>
+              <input id="fullName" name="fullName" type="text" class="form-input" placeholder="Ejemplo: Juan Perez">
+              <p class="form-error" data-error-for="fullName"></p>
+            </div>
+
+            <div class="grid gap-5 md:grid-cols-2">
+              <div>
+                <label for="email" class="form-label">Correo electronico</label>
+                <input id="email" name="email" type="email" class="form-input" placeholder="correo@ejemplo.com">
+                <p class="form-error" data-error-for="email"></p>
+              </div>
+              <div>
+                <label for="phone" class="form-label">Telefono</label>
+                <input id="phone" name="phone" type="tel" class="form-input" placeholder="55555555">
+                <p class="form-error" data-error-for="phone"></p>
+              </div>
+            </div>
+
+            <div>
+              <label for="schedule" class="form-label">Jornada de interes</label>
+              <select id="schedule" name="schedule" class="form-input">
+                <option value="">Selecciona una jornada</option>
+                <option value="Matutina">Matutina</option>
+                <option value="Vespertina">Vespertina</option>
+                <option value="Fin de semana">Fin de semana</option>
+              </select>
+              <p class="form-error" data-error-for="schedule"></p>
+            </div>
+
+            <div>
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea id="message" name="message" rows="5" class="form-input min-h-36" placeholder="Cuentaños que información necesitas"></textarea>
+              <p class="form-error" data-error-for="message"></p>
+            </div>
+
+            <div id="form-status" class="hidden rounded-2xl border px-4 py-3 text-sm font-medium"></div>
+
+            <button type="submit" class="cta-primary justify-center">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-shell mt-10">
+    <div class="mx-auto grid w-[min(1180px,92vw)] gap-8 py-12 md:grid-cols-2 xl:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+            <img src="assets/img/umg.png" alt="Logo UMG" class="h-10 w-10 object-contain">
+          </div>
+          <div>
+            <p class="text-sm font-extrabold text-white">Ingeniería en Sistemas</p>
+            <p class="text-xs uppercase tracking-[0.22em] text-sky-200">Universidad Mariano Galvez</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm leading-7 text-blue-100/80">
+          Formacion universitaria con orientacion tecnologica, enfoque practico y proyeccion profesional.
+        </p>
+      </div>
+      <div>
+      </div>
+
+      <div>
+      </div>
+
+      <div>
+        <h2 class="footer-title">Contacto</h2>
+        <div class="footer-links">
+          <span>sistemas@umg.edu.gt</span>
+          <span>Sede: San Jose Pinula</span>
+          <a href="https://umg.edu.gt/ingenieria/sistemas" target="_blank" rel="noopener noreferrer">umg.edu.gt/ingenieria/sistemas</a>
+        </div>
+        <div class="mt-5 flex gap-3">
+          <a href="https://www.facebook.com/u.marianogalvez" class="social-chip">f</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="mx-auto w-[min(1180px,92vw)] py-5 text-center text-sm text-blue-100/70">
+        © 2026 Ingeniería en Sistemas UMG. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <button
+    id="back-to-top"
+    type="button"
+    class="pointer-events-none fixed bottom-6 right-6 z-50 translate-y-4 rounded-full border border-sky-200 bg-white p-4 text-sm font-extrabold text-umg-navy opacity-0 shadow-soft transition-all duration-300"
+    aria-label="Volver arriba"
+  >
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
